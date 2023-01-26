@@ -1,5 +1,6 @@
 package edu.temple.helloworld
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -13,6 +14,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var nameEditText: EditText
     lateinit var clickMeButton: Button
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -27,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
             /* Write your code here */
 
-            displayTextView.text = "Write code to print a greeting with the entered name when the button is clicked"
+            displayTextView.text = """Welcome ${nameEditText.text}, to Mobile development 3515"""
 
         }
 
